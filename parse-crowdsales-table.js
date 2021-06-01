@@ -2,8 +2,8 @@ const readXlsxFile = require('read-excel-file/node');
 const fs = require('fs');
 
 // File path.
-const path = '/home/amsilson/Downloads/teste_cenas_vfinal_fixed.xlsx';
-const crowdsale_start_time_gmt = parseInt(process.argv[2]) || 1617638400;
+const path = '/home//Downloads/salematic1.xlsx';
+const crowdsale_start_time_gmt = parseInt(process.argv[2]) || 1619539200;
 
 function parseCrowdsaleRows(rows) {
     const crowdsales = []
@@ -13,6 +13,7 @@ function parseCrowdsaleRows(rows) {
             id: parseInt(rows[_r][0].substring(3)),
             num_of_crowdsales: parseInt(rows[_r][3]),
             duration: parseInt(rows[_r][4].substring(0, 2)),
+            crowdsale_cap: parseInt(rows[_r][2]),
             cap: [],
             days: []
         }
@@ -64,7 +65,7 @@ function parseSupplyRows(rows) {
     return pokes;
 }
 
-readXlsxFile(path, { sheet: 'Crowdsale' })
+readXlsxFile(path, { sheet: 'Sheet1' })
 .then(rows => parseCrowdsaleRows(rows))
 .then(crowdsales => convertToTimestamps(crowdsales))
 .then(crowdsales => {

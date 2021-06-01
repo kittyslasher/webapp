@@ -1,5 +1,3 @@
-
-
 export const state = () => ({
     balances: [],
     pokeTypes : 0,
@@ -28,9 +26,3 @@ export const mutations = {
         state.balances = deck;
     },
 }
-
-export const actions =  {
-    increment (context) {
-        
-    }
-  }

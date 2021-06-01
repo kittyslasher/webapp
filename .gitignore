@@ -2,6 +2,9 @@
 node_modules/
 /dist/
 
+dist
+.nuxt
+
 # local env filesgit p
 .env.local
 .env.*.local

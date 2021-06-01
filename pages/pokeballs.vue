@@ -1,9 +1,11 @@
 <template>
-	<v-container>
-  	<v-row style="position:relative;margin:0;margin-top:2%;width:100%;height:50vh;">
+<div>
+<div class="bg-image blur-image"></div>
+<v-container class="over-bkg mt-5">
+  	<v-row style="position:relative;margin:0;margin-top:5%;width:100%;height:48vh;">
 			<v-col cols="12" sm="12" md="12" align="center" style="margin:0;padding:0;width:80%;" >
 				<div style="position:relative;" class="trading-container trading-zone">
-					<h3 style="padding-top:5%;color:#E9EBEE;font-size:1em;">PKBL Available:  <a target="_blank" style="color: inherit;"  href="https://etherscan.io/token/0xb49e5a4fb8559a1297ac89d745aebd5b60d60fe8#readContract" > {{available_pkb}} </a> </h3>				
+					<h3 style="padding-top:5%;color:#424242;font-size:1em;">PKBL Available:  <a target="_blank" style="color: inherit;"  href="https://explorer-mainnet.maticvigil.com/address/0x1b160E0fDcb331D1c0aFCe82E46508e656595802/transactions" > {{available_pkb}} </a> </h3>				
 					<v-row style="position:relative;height:22%;margin-top:4%" class="flex-container-market">
 						<v-col cols="12" sm="12" md="12" class="trading-zone">
 							<v-row>
@@ -32,7 +34,7 @@
 								</v-col>
 
 								<v-col cols="2" sm="2" md="2" align="center" justify="center">
-									<span class="eth" style="font-size:1em;">ETH</span>
+									<span class="eth" style="font-size:0.9em;">MATIC</span>
 								</v-col>
 
 							</v-row>
@@ -41,9 +43,9 @@
 					</v-row>
 
 				
-					<v-row style="position:relative;font-family:Roboto;color:#E9EBEE;height:5%;margin-top:4%;" class="flex-container-noborder">
+					<v-row style="position:relative;font-family:Roboto;color:#424242;height:5%;margin-top:4%;" class="flex-container-noborder">
 						<v-col cols="12" md="12" sm="12" align="center" justify="center">
-							<p> 1 PKBL = {{ pkb_price }} ETH </p>
+							<h5> 1 PKBL = {{ pkb_price }} MATIC </h5>
 						</v-col>
 					</v-row>
 
@@ -78,8 +80,8 @@
 						</v-col>
 					</v-row>
 
-					<v-row style="position:relative;margin-top:15%;height:15%;" class="btn_buy flex-container-market">
-						<button style="position:relative;width:100%; height:100%" class="eth" v-on:click="buy">{{ buyButton }}</button>		
+					<v-row style="position:relative;margin-top:15%;height:15%;background-color:transparent;border:0;" justify="center" align="center" class="btn_buy flex-container-market">
+						<v-btn id="swap-button" v-on:click="buy">{{ buyButton }}</v-btn>		
 					</v-row>
 				</div>
 			</v-col>
@@ -87,45 +89,44 @@
 
   	<v-row style="margin-top:4%;">
 		<v-col cols="12" sm="12" md="12" align="center" style="margin:0;padding:0;width:80%;">
-			<div style="width:35%;" class="ico_data">
-				<v-row style="position:relative;margin-top:2.5%;border-bottom: 1px solid #424242" class="caps-txt">
+			<div style="width:35%;">
+				<v-row style="position:relative;margin-top:2.5%;" class="caps-txt">
 					<v-col cols="6" sm="6" md="6" align="start"  style="position:relative;margin:0;padding:0;">
-						<span><b>Circulating supply: </b></span>
+						<span><b class="crwd-item-pokename" style="letter-spacing:1px;">Circulating supply: </b></span>
 					</v-col>
-					<v-col cols="6" sm="6" md="6" align="center" style="position:relative;margin:0;padding:0;">
-						<span> <a target="_blank" style="color: inherit;" href="https://etherscan.io/token/0xB49e5A4fB8559a1297ac89D745AeBD5B60d60FE8?a=0x99d95c45437d70e96a23eab918f5af08fe9f33ec"> {{ pkb_total_supply_str }} </a> </span>
-					</v-col>
-				</v-row>
-				<v-row style="position:relative;margin-top:5%; border-bottom: 1px solid #424242" class="caps-txt"> 
-					<v-col cols="6" sm="6" md="6" align="start" style="position:relative;margin:0;padding:0;">
-						<span><b>Reserved for NFT sale:</b></span>
-					</v-col>
-					<v-col cols="6" sm="6" md="6" align="center" style="position:relative;margin:0;padding:0;">
-						<span>  {{formatUsd(reservedNFT) }}  </span>
+					<v-col cols="6" sm="6" md="6" align="end" style="position:relative;margin:0;padding:0;">
+						<span class="crwd-item-pokename"><a style="color:inherit;font-family:inherit;font-size:inherit;text-shadow: 3px 3px #386ab8;-webkit-text-stroke: 1px #386ab8;letter-spacing:2px;" target="_blank" class="crwd-item-pokename" href="https://explorer-mainnet.maticvigil.com/tokens/0x1b160E0fDcb331D1c0aFCe82E46508e656595802/token-transfers"> {{ pkb_total_supply_str }} </a> </span>
 					</v-col>
 				</v-row>
-				<v-row style="position:relative;margin-top:5%; border-bottom: 1px solid #424242" class="caps-txt">
+				<v-row style="position:relative;margin-top:5%; " class="caps-txt"> 
 					<v-col cols="6" sm="6" md="6" align="start" style="position:relative;margin:0;padding:0;">
-						<span><b>Staked on NFT contract</b></span>
+						<span><b class="crwd-item-pokename" style="letter-spacing:1px;">Reserved for NFT sale:</b></span>
 					</v-col>
-					<v-col cols="6" sm="6" md="6" align="center" style="position:relative;margin:0;padding:0;">
-						<span> <a target="_blank" style="color: inherit;" href="https://etherscan.io/address/0x99d95c45437d70e96a23eab918f5af08fe9f33ec">  {{ pkb_contract_balance_str }} </a> </span>
+					<v-col cols="6" sm="6" md="6" align="end" style="position:relative;margin:0;padding:0;">
+						<span class="crwd-item-pokename">{{formatUsd(reservedNFT)}}</span>
 					</v-col>
 				</v-row>
-				<v-row style="position:relative;margin-top:5%;border-bottom: 1px solid #424242" class="caps-txt">
+				<v-row style="position:relative;margin-top:5%; " class="caps-txt">
 					<v-col cols="6" sm="6" md="6" align="start" style="position:relative;margin:0;padding:0;">
-						<span><b>Max supply:</b></span>
+						<span><b class="crwd-item-pokename" style="letter-spacing:0px;">Staked on NFT contract:</b></span>
 					</v-col>
-					<v-col cols="6" sm="6" md="6" align="center" style="position:relative;margin:0;padding:0;">
-						<span>  <a target="_blank" style="color: inherit;"  href="https://etherscan.io/token/0xb49e5a4fb8559a1297ac89d745aebd5b60d60fe8" > {{formatUsd(maxSupply) }} </a> </span>
-						
+					<v-col cols="6" sm="6" md="6" align="end" style="position:relative;margin:0;padding:0;">
+						<span class="crwd-item-pokename"><a style="color:inherit;font-family:inherit;font-size:inherit;text-shadow: 3px 3px #386ab8;-webkit-text-stroke: 1px #386ab8;letter-spacing:2px;" target="_blank" class="crwd-item-pokename" href="https://explorer-mainnet.maticvigil.com/tokens/0x1b160E0fDcb331D1c0aFCe82E46508e656595802/token-transfers">  {{ pkb_contract_balance_str }} </a> </span>
+					</v-col>
+				</v-row>
+				<v-row style="position:relative;margin-top:5%;" class="caps-txt">
+					<v-col cols="6" sm="6" md="6" align="start" style="position:relative;margin:0;padding:0;">
+						<span><b class="crwd-item-pokename" style="letter-spacing:1px;">Max supply:</b></span>
+					</v-col>
+					<v-col cols="6" sm="6" md="6" align="end" style="position:relative;margin:0;padding:0;">
+						<span class="crwd-item-pokename" ><a style="color:inherit;font-family:inherit;font-size:inherit;text-shadow: 3px 3px #386ab8;-webkit-text-stroke: 1px #386ab8;letter-spacing:2px;" target="_blank" href="https://explorer-mainnet.maticvigil.com/tokens/0x1b160E0fDcb331D1c0aFCe82E46508e656595802/token-transfers" > {{formatUsd(maxSupply) }} </a> </span>
 					</v-col>
 				</v-row>
 			</div>
 		</v-col>
   	</v-row>
 	</v-container>
-
+</div>
 </template>
 
 <script>
@@ -153,7 +154,7 @@ export default {
 			pkb_buy_amount: '0',
 			reservedNFT : 0,
 			_interval: undefined,
-			buyButton: window.ethereum? 'Buy' : 'Connect Wallet'
+			buyButton: window.ethereum? 'Swap' : 'Connect Wallet'
 		}
 	},
 	computed: {
@@ -164,14 +165,16 @@ export default {
 		},
 		account_pkb_balance: function() {
 			const _ether = Web3Utils.fromWei(this.$store.state.account.pkb_balance, 'ether')
-			return _ether.slice(0, _ether.indexOf('.') + 7)
+			const __ether = _ether.slice(0, 11);
+			return __ether.slice(0, __ether.indexOf('.')+7)
 		},
 		account_address: function() {
 			return this.$store.state.account.address
 		},
 		account_balance: function() {
 			const _ether = Web3Utils.fromWei(this.$store.state.account.balance, 'ether')
-			return _ether.slice(0, _ether.indexOf('.') + 7)
+			const __ether = _ether.slice(0, 11);
+			return __ether.slice(0, __ether.indexOf('.')+7)
 		},
 		pkb_contract_balance_str: function() {
 			const _ether = Web3Utils.fromWei(this.pkb_contract_balance, 'ether')
@@ -314,6 +317,7 @@ export default {
 
 .caps-txt
 {
+	position: relative;
 	font-family: Roboto;
 	font-size:14.5px;
 }
@@ -322,10 +326,8 @@ export default {
 .btn_buy:hover
 {
 	cursor: pointer;
-	
-    color:green !important;
-	background-color: #E9EBEE !important;
-	border: 1px solid #424242;
+	border: 4px 4px solid #424242;
+	background-color: #CDCFD2;
 }
 
 /* Chrome, Safari, Edge, Opera */
@@ -348,7 +350,7 @@ input::-webkit-inner-spin-button {
 	height:100%;
 	padding-right:0;
 	border-radius:100%;
-	background-image:url(~/assets/img/webiste_imgs/ethereum-eth-logo.png); 
+	background-image:url(~/assets/img/webiste_imgs/mat-logo.png); 
 	background-size: 105% 100%;
 	background-color:#E9EBEE;
 	background-repeat: no-repeat;
@@ -372,7 +374,7 @@ input::-webkit-inner-spin-button {
 
 .eth{
 	font-family: Roboto;
-	color:#E9EBEE;
+	color:#424242;
 	font-size:20px;
 	margin:0;
 	font-weight:500;
@@ -397,8 +399,8 @@ input::-webkit-inner-spin-button {
 	width:100%;
 	vertical-align: middle;
 	border-radius:8px;
-	background-color: #E9EBEE;
-	color:#424242;
+	background-color: #424242;
+	color:#E9EBEE;
 	border:none;
 	font-family:Roboto;
 	font-size:17px;
@@ -420,7 +422,7 @@ input::-webkit-inner-spin-button {
   margin-left:2%;
   margin-right:2%;
   border-radius: 1em;
-  border: 1.5px solid #E9EBEE;
+  border: 1.5px solid #424242;
   /* z-index: 0; */
 }
 
@@ -440,7 +442,7 @@ input::-webkit-inner-spin-button {
 	margin:0;
 	font-family:Roboto;
 	font-size:14px;
-	color:#E9EBEE;
+	color:#424242;
 }
 .input-val{
 	padding:0;
@@ -449,7 +451,7 @@ input::-webkit-inner-spin-button {
 	margin-top:0%;
 	font-family:Roboto;
 	font-size:1em;
-	color:#E9EBEE;
+	color:#424242;
 }
 
 .pair-zone-head{
@@ -464,7 +466,7 @@ input::-webkit-inner-spin-button {
 	margin-left:5.3%;
 	font-family:Roboto;
 	font-size: 20px;
-	color:#E9EBEE;
+	color:#424242;
 }
 
 .trading-pair-zone{
@@ -478,7 +480,7 @@ input::-webkit-inner-spin-button {
 	margin-left:5%;
 	margin-right:5%;
 	border-radius: 20px;
-	border: 1px solid #E9EBEE;
+	border: 1px solid #424242;
 	
 }
 
@@ -493,11 +495,16 @@ input::-webkit-inner-spin-button {
 	height: 100%;
 	max-width: 35%;
 	min-width: 35%;
+	border-top: 2px solid #424242;
+	border-left: 1px solid #424242;
+	border-right: 1px solid #424242;
+	border-bottom: 1px solid #424242;
+
 }
 .trading-zone{
 	width: 100%;
 	height: 100%;
-	background-color: #424242;
+	background-color: #E9EBEE;
 	border-radius: 1em;
 }
 
@@ -543,7 +550,18 @@ input::-webkit-inner-spin-button {
 	box-shadow: 4px 4px 4px #d3d3d3;
 }
 
-.ico_data {
-	object-fit: contain;
+#swap-button {
+	-webkit-transition-duration: 0.4s; /* Safari */
+	transition-duration: 0.4s;
+	width:100%;
+	height:100%;
+	font-size:1.5em;
+	font-family: Roboto;
+	padding:0;
+	margin:0;
+	border-radius: 0.8em;
+	background-color:transparent;
+	border: 1.5px solid #424242;
 }
+
 </style>

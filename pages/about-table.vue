@@ -11,12 +11,12 @@
                 <p>PKBL Value</p>
              </v-col>
             <v-col cols="3" sm="3" md="3" class="" >
-                <p>Available</p>
+                <p>Tokens to evolve</p>
              </v-col>
              <v-col cols="3" sm="3" md="3" class="" >
                  <p>PokéTK Supply</p>
              </v-col>
-           
+
         </v-row> 
          <!-- ROWS   -->
         <div style="position:relative;height:248vh;overflow-y:scroll;overflow-x:hidden;margin-top:1vh;">
@@ -45,7 +45,7 @@
              </v-col>
              <v-col cols="3" sm="3" md="3" class="text-center" >
                 <div style="margin-top:10px;margin-left:10%;">
-                     <span>  {{ getAvailable(poke) }}  </span>
+                     <span>  {{ getEvolution(poke) }}  </span>
                  </div>
              </v-col>
              <v-col cols="3" sm="3" md="3" class="text-center" >
@@ -117,6 +117,21 @@ export default {
         formatUsd : function (val){
             return new Intl.NumberFormat('en-US', { style: 'decimal' }).format(val);
         },
+        getEvolution : function(poke)
+        {
+            if( poke.id > 150)
+                return 'NA'
+
+            console.log('PokeList[poke.id + 1] ', poke.id, ' thraseld ', PokeList[poke.id ])
+            if( PokeList[poke.id ].isEvolution  ){
+                return PokeList[poke.id].evolution_threshold || 'NA';
+            }
+            else{
+                return 'NA';
+            }
+            
+        },
+        //get available pkbl
         getAvailable : function(poke){
             return this.formatUsd(poke.maxSupply - poke.totalSupply);
         },

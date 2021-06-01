@@ -4,9 +4,7 @@
 
         <!-- HEAD -->
         <p> SWAP </p>
-
         <v-row class="swap_info">
-
             <v-col cols="5" sm="5" md="" style="margin 0px; padding:0px;max-width: 420px;" >
                  <v-row style="padding:0px;" >
                         <v-col cols="12" sm="6" md="6" style="padding:10px;" >

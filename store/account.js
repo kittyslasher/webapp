@@ -1,8 +1,12 @@
+const MaticMain = '0x89';
+const MaticMumbai = '0x13881';
+
 export const state = () => ({
     address: undefined,
     balance: '0',
     pkb_balance: '0',
     totalBuy : 0,
+    chainIdConncted : MaticMain //MaticMumbai
 })
   
 export const mutations = {

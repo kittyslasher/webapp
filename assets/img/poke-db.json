@@ -5,7 +5,8 @@
        "img":"_nuxt/assets/img/moved_shadow_icons/1_bulbasaur.jpeg",
        "img_shahow":"1_bulbasaur.jpeg",
        "amount":0,
-       "img_colored":"1_bulbasaur.png"
+       "img_colored":"1_bulbasaur.png",
+       "desc" : "There is a plant seed on its back right from the day this Pokémon is born. The seed slowly grows larger."
     },
     {
        "id":2,
@@ -13,13 +14,15 @@
        "img":"_nuxt/assets/img/moved_shadow_icons/2_ivysaur.jpeg",
        "img_shahow":"2_ivysaur.jpeg",
        "amount":0,
-       "img_colored":"2_ivysaur.png"
+       "img_colored":"2_ivysaur.png",
+       "desc" : "When the bulb on its back grows large, it appears to lose the ability to stand on its hind legs."
     },
     {
        "id":3,
        "name":"Venusaur",
        "img":"_nuxt/assets/img/moved_shadow_icons/3_venusaur.png",
        "img_shahow":"3_venusaur.png",
+       "desc": "Its plant blooms when it is absorbing solar energy. It stays on the move to seek sunlight",
        "amount":0,
        "img_colored":"3_venusaur.png"
     },
@@ -28,6 +31,7 @@
        "name":"Charmander",
        "img":"_nuxt/assets/img/moved_shadow_icons/4_charmander.jpeg",
        "img_shahow":"4_charmander.jpeg",
+       "desc" : "It has a preference for hot things. When it rains, steam is said to spout from the tip of its tail.",
        "amount":0,
        "img_colored":"4_charmander.png"
     },
@@ -35,6 +39,7 @@
        "id":5,
        "name":"Charmeleon",
        "img":"_nuxt/assets/img/moved_shadow_icons/5_charmeleon.jpeg",
+       "desc" : "It has a barbaric nature. In battle, it whips its fiery tail around and slashes away with sharp claws. ",
        "img_shahow":"5_charmeleon.jpeg",
        "amount":0,
        "img_colored":"5_charmeleon.png"
@@ -44,6 +49,7 @@
        "name":"Charizard",
        "img":"_nuxt/assets/img/moved_shadow_icons/6_charizard.jpeg",
        "img_shahow":"6_charizard.jpeg",
+       "desc" : "It spits fire that is hot enough to melt boulders. It may cause forest fires by blowing flames.",
        "amount":0,
        "img_colored":"6_charizard.png"
     },
@@ -52,6 +58,7 @@
        "name":"Squirtle",
        "img":"_nuxt/assets/img/moved_shadow_icons/7_squirtle.jpeg",
        "img_shahow":"7_squirtle.jpeg",
+       "desc" : "When it retracts its long neck into its shell, it squirts out water with vigorous force.",
        "amount":0,
        "img_colored":"7_squirtle.png"
     },
@@ -61,6 +68,7 @@
        "img":"_nuxt/assets/img/moved_shadow_icons/8_wartortle.jpeg",
        "img_shahow":"8_wartortle.jpeg",
        "amount":0,
+       "desc": "It is recognized as a symbol of longevity. If its shell has algae on it, that Wartortle is very old. ",
        "img_colored":"8_wartortle.png"
     },
     {
@@ -69,6 +77,7 @@
        "img":"_nuxt/assets/img/moved_shadow_icons/9_blastoise.jpeg",
        "img_shahow":"9_blastoise.jpeg",
        "amount":0,
+       "desc" : "It crushes its foe under its heavy body to cause fainting. In a pinch, it will withdraw inside its shell.",
        "img_colored":"9_blastoise.png"
     },
     {
@@ -76,6 +85,7 @@
        "name":"Caterpie",
        "img":"_nuxt/assets/img/moved_shadow_icons/10_caterpie.jpg",
        "img_shahow":"10_caterpie.jpg",
+       "desc" : "For protection, it releases a horrible stench from the antenna on its head to drive away enemies.",
        "amount":0,
        "img_colored":"10_caterpie.png"
     },
@@ -85,6 +95,7 @@
        "img":"_nuxt/assets/img/moved_shadow_icons/11_metapod.jpg",
        "img_shahow":"11_metapod.jpg",
        "amount":0,
+       "desc" : "It is waiting for the moment to evolve. At this stage, it can only harden, so it remains motionless to avoid attack.",
        "img_colored":"11_metapod.png"
     },
     {
@@ -92,6 +103,7 @@
        "name":"Buterfree",
        "img":"_nuxt/assets/img/moved_shadow_icons/12_buterfree.jpg",
        "img_shahow":"12_buterfree.jpg",
+       "desc" : "In battle, it flaps its wings at great speed to release highly toxic dust into the air.",
        "amount":0,
        "img_colored":"12_buterfreee.png"
     },
@@ -100,6 +112,7 @@
        "name":"Weedle",
        "img":"_nuxt/assets/img/moved_shadow_icons/13_weedle.png",
        "img_shahow":"13_weedle.png",
+       "desc" : "Beware of the sharp stinger on its head. It hides in grass and bushes where it eats leaves.",
        "amount":0,
        "img_colored":"13_weedle.png"
     },
@@ -109,12 +122,14 @@
        "img":"_nuxt/assets/img/moved_shadow_icons/14_kakuna.jpg",
        "img_shahow":"14_kakuna.jpg",
        "amount":0,
+       "desc" : "Able to move only slightly. When endangered, it may stick out its stinger and poison its enemy.",
        "img_colored":"14_kakuna.png"
     },
     {
        "id":15,
        "name":"Beedrill",
        "img":"_nuxt/assets/img/moved_shadow_icons/15_beedrill.jpeg",
+       "desc" : "It has three poisonous stingers on its forelegs and its tail. They are used to jab its enemy repeatedly.",
        "img_shahow":"15_beedrill.jpeg",
        "amount":0,
        "img_colored":"15_beedrill.png"
@@ -124,6 +139,7 @@
        "name":"Pidgey",
        "img":"_nuxt/assets/img/moved_shadow_icons/16_pidgey.jpeg",
        "img_shahow":"16_pidgey.jpeg",
+       "desc" : "Very docile. If attacked, it will often kick up sand to protect itself rather than fight back.",
        "amount":0,
        "img_colored":"16_pidgey.png"
     },
@@ -132,6 +148,7 @@
        "name":"Pidgeotto",
        "img":"_nuxt/assets/img/moved_shadow_icons/17_pidgeotto.jpg",
        "img_shahow":"17_pidgeotto.jpg",
+       "desc" : "This Pokémon is full of vitality. It constantly flies around its large territory in search of prey.",
        "amount":0,
        "img_colored":"17_pidgeotto.png"
     },
@@ -140,6 +157,7 @@
        "name":"Pidgeot",
        "img":"_nuxt/assets/img/moved_shadow_icons/18_pidgeot.jpg",
        "img_shahow":"18_pidgeot.jpg",
+       "desc" : "This Pokémon flies at Mach 2 speed, seeking prey. Its large talons are feared as wicked weapons.",
        "amount":0,
        "img_colored":"18_pidgeot.png"
     },
@@ -148,12 +166,14 @@
        "name":"Rattata",
        "img":"_nuxt/assets/img/moved_shadow_icons/19_rattata.jpeg",
        "img_shahow":"19_rattata.jpeg",
+       "desc" : "Will chew on anything with its fangs. If you see one, you can be certain that 40 more live in the area.",
        "amount":0,
        "img_colored":"19_rattata.png"
     },
     {
        "id":20,
        "name":"Raticate",
+       "desc" : "Its hind feet are webbed. They act as flippers, so it can swim in rivers and hunt for prey.",
        "img":"_nuxt/assets/img/moved_shadow_icons/20_raticate.jpeg",
        "img_shahow":"20_raticate.jpeg",
        "amount":0,
@@ -164,6 +184,7 @@
        "name":"Spearow",
        "img":"_nuxt/assets/img/moved_shadow_icons/21_spearow.jpeg",
        "img_shahow":"21_spearow.jpeg",
+       "desc": "Inept at flying high. However, it can fly around very fast to protect its territory.",
        "amount":0,
        "img_colored":"21_spearow.png"
     },
@@ -172,12 +193,14 @@
        "name":"Fearow",
        "img":"_nuxt/assets/img/moved_shadow_icons/22_fearow.jpeg",
        "img_shahow":"22_fearow.jpeg",
+       "desc" : "A Pokémon that dates back many years. If it senses danger, it flies high and away, instantly.",
        "amount":0,
        "img_colored":"22_fearow.png"
     },
     {
        "id":23,
        "name":"Ekans",
+       "desc" : "The older it gets, the longer it grows. At night, it wraps its long body around tree branches to rest.",
        "img":"_nuxt/assets/img/moved_shadow_icons/23_ekans.jpeg",
        "img_shahow":"23_ekans.jpeg",
        "amount":0,
@@ -188,6 +211,7 @@
        "name":"Arbok",
        "img":"_nuxt/assets/img/moved_shadow_icons/24_arbok.jpeg",
        "img_shahow":"24_arbok.jpeg",
+       "desc": "The frightening patterns on its belly have been studied. Six variations have been confirmed.",
        "amount":0,
        "img_colored":"24_arbok.png"
     },
@@ -197,13 +221,15 @@
        "img":"_nuxt/assets/img/moved_shadow_icons/25_pikachu.jpeg",
        "img_shahow":"25_pikachu.jpeg",
        "amount":0,
-       "img_colored":"25_pikachu.png"
+       "img_colored":"25_pikachu.png",
+       "desc"  : "Pikachu that can generate powerful electricity have cheek sacs that are extra soft and super stretchy."
     },
     {
        "id":26,
        "name":"Raichu",
        "img":"_nuxt/assets/img/moved_shadow_icons/26_raichu.png",
        "img_shahow":"26_raichu.png",
+       "desc" : "Its long tail serves as a ground to protect itself from its own high-voltage power.",
        "amount":0,
        "img_colored":"26_raichu.png"
     },
@@ -212,6 +238,7 @@
        "name":"Sandshrew",
        "img":"_nuxt/assets/img/moved_shadow_icons/27_sandshrew.jpeg",
        "img_shahow":"27_sandshrew.jpeg",
+       "desc" : "It loves to bathe in the grit of dry, sandy areas. By sand bathing, the Pokémon rids itself of dirt and moisture clinging to its body.",
        "amount":0,
        "img_colored":"27_sandshrew.png"
     },
@@ -220,13 +247,15 @@
        "name":"Sandslash",
        "img":"_nuxt/assets/img/moved_shadow_icons/28_sandslash.png",
        "img_shahow":"28_sandslash.png",
+       "desc" : "The drier the area Sandslash lives in, the harder and smoother the Pokémon’s spikes will feel when touched.",
        "amount":0,
        "img_colored":"28_sandslash.png"
     },
     {
        "id":29,
-       "name":"NidoranF",
+       "name":"Nidoran ♀",
        "img":"_nuxt/assets/img/moved_shadow_icons/29_nidoranF.jpeg",
+       "desc" : "Females are more sensitive to smells than males. While foraging, they’ll use their whiskers to check wind direction and stay downwind of predators.",
        "img_shahow":"29_nidoranF.jpeg",
        "amount":0,
        "img_colored":"29_nidoran.png"
@@ -234,6 +263,7 @@
     {
        "id":30,
        "name":"Nidorina",
+       "desc" : "The horn on its head has atrophied. It’s thought that this happens so Nidorina’s children won’t get poked while their mother is feeding them.",
        "img":"_nuxt/assets/img/moved_shadow_icons/30_nidorina.jpeg",
        "img_shahow":"30_nidorina.jpeg",
        "amount":0,
@@ -242,6 +272,7 @@
     {
        "id":31,
        "name":"Nidoqueen",
+       "desc" : "Nidoqueen is better at defense than offense. With scales like armor, this Pokémon will shield its children from any kind of attack.",
        "img":"_nuxt/assets/img/moved_shadow_icons/31_nidoqueen.jpeg",
        "img_shahow":"31_nidoqueen.jpeg",
        "amount":0,
@@ -249,9 +280,10 @@
     },
     {
        "id":32,
-       "name":"NidoranM",
+       "name":"Nidoran ♂",
        "img":"_nuxt/assets/img/moved_shadow_icons/32_nidoranM.jpeg",
        "img_shahow":"32_nidoranM.jpeg",
+       "desc" : "The horn on a male Nidoran’s forehead contains a powerful poison. This is a very cautious Pokémon, always straining its large ears.",
        "amount":0,
        "img_colored":"32_nidoran.png"
     },
@@ -260,12 +292,14 @@
        "name":"Nidorino",
        "img":"_nuxt/assets/img/moved_shadow_icons/33_nidorino.jpeg",
        "img_shahow":"33_nidorino.jpeg",
+       "desc"  : "With a horn that’s harder than diamond, this Pokémon goes around shattering boulders as it searches for a moon stone.",
        "amount":0,
        "img_colored":"33_nidorino.png"
     },
     {
        "id":34,
        "name":"Nidoking",
+       "desc" : "When it goes on a rampage, it’s impossible to control. But in the presence of a Nidoqueen it’s lived with for a long time, Nidoking calms down.",
        "img":"_nuxt/assets/img/moved_shadow_icons/34_nidoking.jpeg",
        "img_shahow":"34_nidoking.jpeg",
        "amount":0,
@@ -274,6 +308,7 @@
     {
        "id":35,
        "name":"Clefairy",
+       "desc" : "It is said that happiness will come to those who see a gathering of Clefairy dancing under a full moon.",
        "img":"_nuxt/assets/img/moved_shadow_icons/35_clefairy.jpeg",
        "img_shahow":"35_clefairy.jpeg",
        "amount":0,
@@ -282,6 +317,7 @@
     {
        "id":36,
        "name":"Clefable",
+       "desc" : "A timid fairy Pokémon that is rarely seen, it will run and hide the moment it senses people.",
        "img":"_nuxt/assets/img/moved_shadow_icons/36_clefable.jpeg",
        "img_shahow":"36_clefable.jpeg",
        "amount":0,

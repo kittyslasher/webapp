@@ -1,6 +1,6 @@
 # pokeswapnuxt
 
-# Read
+# READ 
 https://nuxtjs.org/docs/2.x/get-started/routing
 https://nuxtjs.org/docs/2.x/concepts/nuxt-lifecycle
 
@@ -8,7 +8,6 @@ https://nuxtjs.org/docs/2.x/concepts/nuxt-lifecycle
 
 ```bash
 # install dependencies
-
 $ npm install
 
 # serve with hot reload at localhost:3000

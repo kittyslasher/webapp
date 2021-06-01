@@ -18,15 +18,15 @@
 
         <v-col class="md-6 text-left bill-text" >
             
-          <div> <h3> Hey suckers! Remember me? </h3> </div> 
+          <div> <h3> Hey Pokéfreaks! Remember me? </h3> </div> 
           <br>
 
           <div>
-              <p>All of you sadistic fucks let me stuck in a computer game 25 years ago just to receive a stupid ticket for a boat trip you didn’t even take.</p>
-              <p>25 years man! It took you 25 years to finally have something that can be called an internet, - yeah, not that Web 2.0. shit you had before - and the tech so I could finally complete the digitalisation of all Pokémon through crypto and bring them to my online world. I can finally be free with the ones I love and I don’t even have to stand your stupid faces again.</p>
-              <p>Ok, now that I got this out of the system you want to know what the hell I am doing here, right?</p>
+              <p>You let me stuck in a computer game 25 years ago just to receive a ticket for a boat trip you didn’t even take. (And guess what, Mew wasn’t behind that bus either).</p>
+              <p>25 years man! It took you 25 years to finally have something that can be called an internet, - yeah, not that creepy Web 2.0.  you had before - and the tech so I could finally complete the digitalisation of all Pokémon through crypto and bring them to my online world. I can finally be free with the ones I love but I can’t take care of them all so I’m giving you a chance to catch and train them like you’ve always wanted to.</p>
+              <p>All 1st gen Pokémon are already here as NFTs in the MATIC world and they will be out there in the wild for you to catch them.</p>
               <p>Well, isn’t that obvious you ungrateful fucks?! I’m setting free those 151 bastards you’ve all loved to collect in many different forms and shapes for the past 20 years in the crypto world, so you can finally collect them in a way that makes sense to your purse and doesn’t get thrown to trash by your momma on moving day.</p>
-              <p>Oak and the other guys will be out there spotting Pokémon in the digital wild and when they’re sighted, you’ll be able to catch them here on Pokéswap and stack them in your wallets. After that, it’s up to you. Stay with them, trade them, catch them all or get rich. I don’t give a fuck.</p>
+              <p>After that, you can train them, teach them new skills, equip, trade and battle them. But let’s get it started slowly, follow my lead:</p>
           </div>
           
 
@@ -49,10 +49,10 @@
                         <p> If you want to be ultimate gen 1 Pokémon trainer in the crypto world, <b> you’ll have to catch Mew </b>.  Easy enough but only 100 of you will ever be able to do it </p>
                     </li>
                      <li >
-                        <p> There are 151 species of Pokémon. Some of them more abundant than other. There’s a total of <b> wild 5,876,375,930 Pokémon </b> and all of them are <b>NFTs in an ERC-1155 contract named </b> “the wild” <a target="_blank" style="color: inherit;"   href="https://etherscan.io/address/0x99d95c45437d70e96a23eab918f5af08fe9f33ec"> (check here) </a></p>
+                        <p> There are 151 species of Pokémon. Some of them more abundant than other. There’s a total of <b> wild 5,876,375,930 Pokémon </b> and all of them are <b>NFTs in the Matic network and in an ERC-1155 contract named </b> “the wild” <a target="_blank" style="color: inherit;"   href="https://explorer-mainnet.maticvigil.com/address/0x2eB320d14cC4a95FBbb156eb3E2172259570bdb7"> (check here) </a></p>
                     </li>
                      <li >
-                        <p> <b>To catch wild Pokémon you’ll need Pokéballs (PKBL) </b>. They are ERC-20 tokens and there will only be a <b>maximum of 353,925,000 of them ever</b>. (there’s no vesting, amount allocated to me nor any of those financial shitty tricks. Just pure max supply ready to be minted)Check ERC20 contract <a target="_blank" style="color: inherit;" href="https://etherscan.io/address/0xb49e5a4fb8559a1297ac89d745aebd5b60d60fe8" >(here)</a> </p>
+                        <p> <b>To catch wild Pokémon you’ll need Pokéballs (PKBL) </b>. They are ERC-20 tokens and there will only be a <b>maximum of 353,925,000 of them ever</b>.Check ERC20 contract <a target="_blank" style="color: inherit;" href="https://explorer-mainnet.maticvigil.com/address/0x1b160E0fDcb331D1c0aFCe82E46508e656595802" >(here)</a> </p>
                     </li>
                     <li >
                         <p> You can mint and get them at the <a target="_blank" style="color: inherit;"  href="/pokeballs"> Pokéballs page.</a></p>
@@ -64,7 +64,7 @@
                         <p> Evolution Pokémon can only be generated at the <b> fixed cost of a certain amount of Pokémon from its’ lower evolutionary stage </b>. You will need to have <b>550 Charmander</b> in order to evolve it into a Chameleon and <b>100 Charmeleon</b> to get <b>1 Charizard.</b> </p>
                     </li>
                      <li >
-                        <p>Every time you evolve a Pokémon, the amount of the <b>lower stage Pokémon used is burnt forever</b>. </p>
+                        <p>Every time you evolve a Pokémon, the amount of the <b>lower stage Pokémon used is burned forever</b>. </p>
                     </li>
                      <li >
                         <p>You can evolve your Pokémon any time you want on the <a style="color: inherit;"  href="/pokedex"> PokéDex page  </a> </p>
@@ -90,20 +90,20 @@
                      <br>
 
                      <li >
-                        <p>During <b>90 days the game is on </b> and it won’t be for the faint of heart. </p>
+                        <p>During <b>180 days the game is on </b> and it won’t be for the faint of heart. </p>
                     </li>
                      <li >
-                        <p><b> Half the max supply of PKBL are available for minting</b>  at at fixed cost of <b>0.0005 ETH</b>. You can get them on the “Pokéballs” page. </p>
+                        <p><b> Half the max supply of PKBL are available for minting</b>  at at fixed cost of <b>0.1 MATIC</b>. You can get them on the “Pokéballs” page. </p>
                     </li>
                     
                      <li>
                         <p>The <b>other half is locked for the Pokémon race</b>. </p>
                     </li>
                      <li >
-                        <p>During these <b>90 days some wild Pokémon will be unleashed</b>. you won’t know which species, how many, for how long or when these unleashes will happen but you can expect up to <b> 9 every day</b>. </p>
+                        <p>During these <b>180 days some wild Pokémon will be unleashed</b>. you won’t know which species, how many, for how long or when these unleashes will happen but you can expect up to <b> 9 every day</b>. </p>
                     </li>
                      <li >
-                        <p>You will be able to catch those Pokémon on Pokéswap home page <b>directly with Ether at half the ETH price</b> it would cost you if you caught them with your purchased PKBL. </p>
+                        <p>You will be able to catch those Pokémon on Pokéswap home page <b>directly with MATIC at half the price</b> it would cost you if you caught them with your purchased PKBL. </p>
                     </li>
                      <li >
                         <p>By directly catching the Pokémon during the Pokémon race you will <b>receive your NFTs</b> and the correspondent amount of <b>PKBL will be staked in “The wild” contract</b>. </p>
@@ -118,7 +118,7 @@
                         <p><b>To catch Mew you’ll need to have at least 2 of every Pokémon species</b> available on your PokéDex  and exchange half (1 of every 150 species) of them for the ultimate Pokémon.  </p>
                     </li>
                      <li >
-                        <p>When a Mew is caught, the 150 Pokémon traded are burnt forever. </p>
+                        <p>When a Mew is caught, the 150 Pokémon traded are burned forever. </p>
                     </li>
 
                 </ul>
@@ -178,7 +178,6 @@
 import AboutTable from './about-table.vue'
 import PokeCard from './poke-card.vue'
 
-
 export default {
     props : [
         "name",
@@ -200,9 +199,8 @@ export default {
       }
   },
   mounted :  function(){
-
-      let poke = this.poke && this.poke.length > 0 ? this.poke[0] : -1;
-      console.log(" Component was mounted  ", poke )
+    let poke = this.poke && this.poke.length > 0 ? this.poke[0] : -1;
+    console.log(" Component was mounted  ", poke )
   }
 }
 </script>

@@ -11,12 +11,12 @@
             </v-col> 
 
             <v-col cols="4" sm="4" md="4" align="center" justify="center" style="position:relative;height:80%;">
-                <h1 class="name" style="padding:0px;"> {{ getName(poke.id) }}</h1>
-                <p class="airdrop text-center" style="margin:0px;font-size:14px;">Avail. {{ remaining_supply }} / {{ cap }}</p>
+                <h1 class="name" style="padding:0px;letter-spacing:2px;"> {{ getName(poke.id) }}</h1>
+                <p class="airdrop text-center" style="margin:0px;font-size:14px;font-family: Robotoit;">Avail. {{ remaining_supply }} / {{ cap }}</p>
                 <div style="position:relative; margin-right:5%; margin-top:15%;">
                     <v-row style="font-size:0.8em;position:relative;width=100%;" justify="end" align="center">
                         <v-col cols="8" md="8" sm="6" justify="start" align="start">
-                            <span style="font-weight:500;">Max. Supply:</span>
+                            <span style="font-weight:500;font-family:Roboto">Max. Supply:</span>
                         </v-col>
                         <v-col cols="4" md="4" sm="6" justify="center"  align="end">
                             <span>{{max_supply}}</span>
@@ -24,7 +24,7 @@
                     </v-row>
                     <v-row style="font-size:0.8em;position:relative;width=100%;margin-top:0;">
                         <v-col cols="8" md="8" sm="8" justify="start" align="start">
-                            <span style="font-weight:500;">Price (ETH):</span>
+                            <span style="font-weight:500;font-family:Roboto;">Price (MATIC):</span>
                         </v-col>
                         <v-col cols="4" md="4" sm="4" justify="center" align="end">
                             <span>{{unit_price_eth}}</span>
@@ -53,7 +53,7 @@
                 </v-col>
             </v-row>
 
-            <p style="margin-top:10%;margin-bottom:0;">{{amount_price}} ETH</p>
+            <p style="margin-top:10%;margin-bottom:0;">{{amount_price}} MATIC</p>
 
             <v-col cols="12" sm="12" class="" style="padding:0;margin-top:5%;">
                 <v-btn v-on:click="buyPokemon" rounded width="75%" style="color:white;background-color: #424242 !important;">Catch!</v-btn> 
@@ -105,12 +105,6 @@ export default {
             return {
                 "background-image": "url("+this.poke_image + ")" ,
             };
-        },
-        total_price_eth: function() {
-            //.then(result => (new BN(PKBSupply)).div((new BN(Web3Utils.hexToNumberString(result)))) )
-            //.then(rate => (new BN(parseInt(this.buy_amount))).mul(rate))
-            //.then(price => (new BN(this.$store.state.pkb.crowdsale_rate)).mul(price).div(new BN(EtherUnit)))
-            //.then(value => ethereum.request({ 
         }
     },
     watch: {
@@ -120,15 +114,13 @@ export default {
                 .then(value_eth => this.amount_price = value_eth.slice(0, value_eth.indexOf('.')+8))
         }
     },
-    methods: {
-        
+    methods: {    
         getName(id)
         {
             return PokeList[id-1].name;
         },
         getPokeImg : function()
         {
-            // console.log("Poke ID ", this.poke.id);
             let classes =  this.designByType(this.poke.id);
             this.card_back = classes.card_back;
             this.poke_image = classes.poke_image;
@@ -224,6 +216,8 @@ export default {
                     this.$store.state.contracts.erc1155.address
                 )
 
+                console.log("ERC1155 address ", this.$store.state.contracts.erc1155.address );
+
                 return ethereum.request({
                     method: 'eth_call',
                     params: [{
@@ -272,7 +266,6 @@ export default {
             .then(() => this.calculateRemainingAmount())
         }
     },
-
     mounted () {
         const _this = this;
         _this._interval = setInterval(function() {
@@ -287,6 +280,7 @@ export default {
                 `${minutes < 10? '0'+minutes:minutes}:` +
                 `${seconds < 10? '0'+seconds:seconds}`
 
+            if(distance <= 0) _this.$emit('self-destruct');
         }, 1000);
 
         // Calculate token price in ETH
@@ -295,8 +289,6 @@ export default {
             this.$store.state.contracts.erc1155.address
         )
 
-        // const provider = await detectEthereumProvider();
-        // console.log('Connected ',  provider );
         if( window.ethereum ) {
             ethereum.request({
                 method: 'eth_call',
@@ -309,8 +301,11 @@ export default {
             .then(() => _this.calculateETHValue(1))
             .then(value => Web3Utils.fromWei(value))
             .then(value_eth => {
+                
                 _this.unit_price_eth = value_eth.slice(0, value_eth.indexOf('.')+8)
                 _this.amount_price = value_eth.slice(0, value_eth.indexOf('.')+8)
+                
+                _this.buy_amount =  Math.round(1.2  / _this.amount_price) > 0 ?   Math.round(1.2  / _this.amount_price) : 1;
             })
         }
       
@@ -353,7 +348,6 @@ export default {
 
 
 .btn{
-
     width: 75%;
     text-transform: uppercase;
     text-decoration: none;
@@ -402,13 +396,12 @@ export default {
 }
 
 
-.catch_btn{
+.catch_btn {
     margin-top:-3px;
     vertical-align: middle;
     font-size: 11px;
     font-family: Roboto;
     color:white  !important;
-
 }
 
 
@@ -542,9 +535,8 @@ p.airdrop{
     margin-top: 0px;
     margin-bottom: 0px;
     width:100%;
-    font-family: Robotoit !important;
+    font-family: RobotoIt !important;
     color:#4d4d4d;
-
 }
 
 
@@ -795,7 +787,6 @@ p.airdrop{
     padding: 1%;
     display: flex;
     border: 4px solid #424242;
-    box-shadow: 4px 4px 4px #d3d3d3;
     margin-bottom: 10%;
 }
 

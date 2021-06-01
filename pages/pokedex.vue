@@ -3,7 +3,17 @@
    
         <v-row class="">
              <v-col  cols="6">
-                <h3> Pokédex Holdings: {{this.totalNfts}} Pokémon </h3>
+                <h3>Pokédex Holdings: {{this.totalNfts}} Pokémon </h3>
+
+                <div v-if="false">
+                    <p style="font-size:13px;">View on 
+                    <a target="_blank"  :href="getOpensea()" >
+                        
+                        <img style="vertical-align:middle" alt="View Deck on Opensea" src="~/assets/img/opensea.png" width="25" height="25" >
+                    </a>
+                    </p>
+                </div>
+
             </v-col>
              <v-col cols="6" >
                 <!-- <h3>  {{this.totalNfts}} </h3> -->
@@ -26,7 +36,7 @@
                         v-model="dialog"
                         transition="dialog-bottom-transition"
                     >
-                      <PokedexCard  v-bind:poke="selectedPoke"  />
+                      <PokedexCard v-bind:show="dialog" v-bind:poke="selectedPoke"  />
                     </v-dialog>
 
                 </v-row>
@@ -77,7 +87,6 @@
 </template>
 
 <script>
-import AppAbout from './rules.vue'
 import PokeCard from './poke-card.vue'
 import PokeList from '../bd/poke-dex.json'
 import Web3Utils from "web3-utils";
@@ -130,7 +139,8 @@ export default {
             totalNfts : 0,
             isMounted : false,
             isBalanceLoad : false,
-            rowsIds : []
+            rowsIds : [],
+            address : this.$store.state.account.address
         }
     },
     mounted: async function () 
@@ -140,6 +150,7 @@ export default {
             this.$store.commit('deck_balance/setTotalTypes',   this.user_deck.length )
             this.isMounted = true;
             this.genRowIDs()
+            this.getDeckBalance()
             this._interval = setInterval(this.getDeckBalance, 1000 * 5) 
     },
     beforeDestroy() {
@@ -164,6 +175,9 @@ export default {
     },
 
     methods: {
+        getOpensea(){
+            return  "https://opensea.io/accounts/" + this.address
+        },
         initPokeList ()
         {
             console.log('toke list ' , PokeList );
@@ -186,7 +200,8 @@ export default {
 
             if(!item.tokens || item.tokens == 0 || !window.ethereum) return
             // console.log('Click Card ', item);
-            item.evolution_threshold = this.pokeList[item.id].isEvolution? this.pokeList[item.id].evolution_threshold : 0
+            item.evolution_threshold = this.pokeList[item.id].isEvolution? this.pokeList[item.id].evolution_threshold : 0;
+            item.nextId =  this.pokeList[item.id].isEvolution? this.pokeList[item.id].id : undefined;
             this.selectedPoke = item;
             this.dialog = !this.dialog;
         },
@@ -215,6 +230,7 @@ export default {
             let pokes_id = []
             const self = this;
             const currentAccount = this.$store.state.account.address;
+            this.address = this.$store.state.account.address;
 
             for(var i=1; i < (totalIds + 1) ; i++)
             {
@@ -368,7 +384,7 @@ export default {
 
     },
     name: 'poke-dex',
-    components: { AppAbout, PokeCard,
+    components: { PokeCard,
         PokedexCard },
 }
 
@@ -376,6 +392,13 @@ export default {
 </script>
 
 <style>
+
+.opensea_img{
+	background-image:url(~/assets/img/webiste_imgs/mat-logo.png); 
+	background-size: 50px 50px;
+	background-color:#E9EBEE;
+	background-repeat: no-repeat;
+}
 
 .no_border_img {
     border-radius: 0 !important;
@@ -429,6 +452,7 @@ export default {
     /* background: white; */
     margin:0;
     min-height: 90px;
+    max-height: 95px;
     height:50%;
     width:90%;
     background-size: 50%;
@@ -463,7 +487,6 @@ export default {
   flex-flow: row wrap;
   /* Then we define how is distributed the remaining space */
   justify-content: space-around;
-  
   padding: 0;
   margin-top:4%;
   margin-left:2%;

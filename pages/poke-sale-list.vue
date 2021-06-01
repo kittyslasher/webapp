@@ -1,10 +1,7 @@
 <template>
-
-    <v-container style="padding:0px;" >
-       
-        
-        <div style="padding:0px;height:80vh;overflow-y:scroll;overflow-x:hidden" >
-             <PokeCard  v-for="item in crowdsales" :key="item.id" v-bind:poke="item"  />
+    <v-container style="padding:0px;margin:0 !important;" >
+        <div style="padding:0px;height:81vh;overflow-y:scroll;overflow-x:hidden;" >
+             <PokeCard v-for="item in crowdsales" :key="item.id" v-bind:poke="item" v-on:self-destruct="deletePokeCard(item.id)"/>
         </div>
     </v-container>
 
@@ -13,29 +10,18 @@
 <script>
 import PokeCard from './poke-card.vue'
 import Crowdsales from '../bd/crowdsales.json'
-import PokeList from '../bd/poke-dex.json' 
-
 
 export default {
     data() {
-        const crowdsales = Crowdsales.map(crwd => {
-            const _now = Math.floor(Date.now()/1000);
-            const tw = crwd.time_windows.find(_tw => _now >= _tw.start && _now <= _tw.end);
-            const tw_index = crwd.time_windows.findIndex(_tw => _now >= _tw.start && _now <= _tw.end);
-
-            if(tw != undefined) {
-                return {
-                    id: crwd.id,
-                    end_date: tw.end,
-                    cumulative_cap: crwd.cap.slice(0, tw_index+1).reduce((acc, curr) => acc + curr, 0),
-                };
-            }
-            else
-                return undefined;
-        }).filter(crwd => crwd != undefined)
-
         return {
-            crowdsales: crowdsales
+            crowdsales: this.$store.state.crowdsales.active
+        }
+    },
+    methods: {
+        deletePokeCard: function(id) {
+            console.log('DELETE Crowdsale:', id);
+            const index = this.crowdsales.findIndex(crwd => id == crwd.id);
+            this.crowdsales.splice(index, 1)
         }
     },
     name: 'poke-sale-list',

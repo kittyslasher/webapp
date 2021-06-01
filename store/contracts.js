@@ -1,4 +1,3 @@
-import Contract from 'web3-eth-contract';
 import { erc20crowdsale, erc1155crowdsale } from '../bd/contracts_metadata.json';
 
 export const state = () => ({
