@@ -1,0 +1,26 @@
+/* -- Fonts -- */
+@font-face {
+    font-family: "Pokemonsolidx";
+    src:url(../assets/pokemon_font/Pokemon_Solidx.ttf);
+    }
+    @font-face {
+    font-family: "Roboto";
+    src:url(../assets/pokemon_font/Roboto/Roboto-Regular.ttf);
+    }
+    @font-face {
+    font-family: "Pokemonhollow";
+    src:url(../assets/pokemon_font/Pokemon_Hollow.ttf);
+    }
+    @font-face {
+    font-family: "RobotoIT";
+    src:url(../assets/pokemon_font/Roboto/Roboto-Blackitalic.ttf);
+    }
+    @font-face {
+    font-family: "Robotolight";
+    src:url(../assets/pokemon_font/Roboto/Roboto-Light.ttf);
+    }
+    @font-face {
+    font-family: "Robotobold";
+    src:url(../assets/pokemon_font/Roboto/Roboto-Bold.ttf);
+    }
+    

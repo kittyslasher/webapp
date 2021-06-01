@@ -1,0 +1,9 @@
+{
+    "grass" : ["fire"	,"water"],
+    "fire" : ["water"],
+    "water" : ["thunder"],
+    "earth" : ["psy",	"thunder"],
+    "thunder" : ["earth"],
+    "psy" : ["psy", "earth"],
+    "normal" : ["earth"	, "normal"]
+}

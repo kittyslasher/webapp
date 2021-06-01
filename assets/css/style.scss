@@ -1,0 +1,182 @@
+:root {
+  --black: #000000;
+  --very-light-grey: #e5e5e5;
+  --dark-turquoise: #065a5f;
+  --white: #f7f7f7;
+  --pale-blue: #dbedef;
+  --teal-blue: #009fb1;
+  --charcoal-grey: #373c43;
+  --coral: #e95e5e;
+  --turquoise-green: #00e284;
+  --light-grey-blue: #b8b9bb;
+  --pale-grey: #f5f5f7;
+}
+
+
+
+*:focus {outline:none !important}
+
+#app.dca-verify-web {
+  * {
+    font-family: 'Montserrat';
+  }
+  main {
+    background-color: var(--pale-grey);
+     //background-image: url('../fundo-verify.png');
+    background-repeat: no-repeat, repeat;
+    background-position: center; /* Center the image */
+    background-size: cover; /* Center the image */
+    .v-main__wrap {
+      max-width: 1294px;
+      margin: 0 auto;
+    }
+  }
+  .router-views {
+    max-width: 1294px;
+    min-height: calc(100vh - 61px);
+    padding-top: 64px;
+    margin: 0 auto;
+  }
+  .signin {
+    max-width: unset;
+  }
+  .title_header {
+    font-size: 15px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    text-align: left;
+    letter-spacing: normal;
+    color: var(--charcoal-grey);
+  }
+
+  @media screen and (min-width: 1024px) {
+    .title_header {
+      font-size: 26px;
+      text-align: center;
+    }
+  }
+
+  // .subtitle_header {
+  //   font-size: 20px;
+  //   font-weight: 600;
+  //   font-stretch: normal;
+  //   font-style: normal;
+  //   line-height: normal;
+  //   letter-spacing: normal;
+  //   color: var(--charcoal-grey);
+  // }
+  // .subtitle_text {
+  //   font-size: 16px;
+  //   font-weight: 500;
+  //   font-stretch: normal;
+  //   font-style: normal;
+  //   line-height: 1.5;
+  //   letter-spacing: normal;
+  //   color: var(--charcoal-grey);
+  // }
+  // .menu_text {
+  //   font-size: 13px;
+  //   font-weight: 500;
+  //   font-stretch: normal;
+  //   font-style: normal;
+  //   line-height: normal;
+  //   letter-spacing: normal;
+  //   color: var(--charcoal-grey);
+  //   text-transform: none;
+  //   &.v-tab--active {
+  //     font-weight: 600;
+  //     color: var(--teal-blue);
+  //   }
+  // }
+  // .input-field {
+  //   label {
+  //     font-size: 14px;
+  //     font-weight: 500;
+  //     font-stretch: normal;
+  //     font-style: normal;
+  //     line-height: normal;
+  //     letter-spacing: normal;
+  //     color: var(--charcoal-grey);
+  //   }
+  // }
+  // .light_text {
+  //   font-size: 13px;
+  //   font-weight: 500;
+  //   font-stretch: normal;
+  //   font-style: normal;
+  //   line-height: normal;
+  //   letter-spacing: normal;
+  //   color: var(--light-grey-blue);
+  // }
+  // .normal_text {
+  //   font-size: 15px;
+  //   font-weight: 500;
+  //   font-stretch: normal;
+  //   font-style: normal;
+  //   line-height: 1.6;
+  //   letter-spacing: normal;
+  //   color: var(--charcoal-grey);
+  // }
+
+  // .strong_text {
+  //   font-size: 14px;
+  //   font-weight: 600;
+  //   font-stretch: normal;
+  //   font-style: normal;
+  //   line-height: normal;
+  //   letter-spacing: normal;
+  //   color: var(--charcoal-grey);
+  // }
+  // a.links {
+  //   font-family: Montserrat;
+  //   font-size: 15px;
+  //   font-weight: 500;
+  //   font-stretch: normal;
+  //   font-style: normal;
+  //   line-height: 1.6;
+  //   letter-spacing: normal;
+  //   color: var(--teal-blue);
+  //   text-decoration: none;
+  // }
+  // .underline_link {
+  //   border-bottom: solid 2px #0ea4b5;
+  // }
+  // .advance-btn {
+  //   border-radius: 3px;
+  //   border: solid 1px var(--teal-blue);
+  //   width: 100%;
+  //   padding: 11px;
+  //   height: unset;
+  //   .v-ripple__container {
+  //     color: #87c2c9;
+  //   }
+  //   .v-btn__content,
+  //   & {
+  //     font-family: Montserrat;
+  //     font-size: 16px;
+  //     font-weight: 500;
+  //     font-stretch: normal;
+  //     font-style: normal;
+  //     line-height: normal;
+  //     letter-spacing: normal;
+  //     text-align: center;
+  //     text-transform: none;
+  //     color: var(--teal-blue);
+  //   }
+  //   &::before,
+  //   &:hover {
+  //     background-color: #c7eaee;
+  //   }
+
+  //   // &.v-btn--disabled {
+  //   //   border: solid 1px var(--very-light-grey);
+  //   //   background-color: var(--white);
+  //   //   .v-btn__content {
+  //   //     color: #d8d8d8;
+  //   //   }
+  //   // }
+
+  // }
+}
